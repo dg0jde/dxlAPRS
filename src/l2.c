@@ -456,11 +456,11 @@ static void value(l2_pPARMS p, uint16_t * x)
 } /* end value() */
 
 
-static void bool(l2_pPARMS p, char * b)
+static void isbool(l2_pPARMS p, char * b)
 {
    if (p->test) p->val = (uint32_t)*b;
    else *b = p->val!=0UL;
-} /* end bool() */
+} /* end isbool() */
 
 
 extern void l2_Parm(l2_pPARMS p)
@@ -497,22 +497,22 @@ extern void l2_Parm(l2_pPARMS p)
             value(p, &maxtxbuffers);
             break;
          case 7U:
-            bool(p, &anonym0->Digipeat);
+            isbool(p, &anonym0->Digipeat);
             break;
          case 8U:
-            bool(p, &anonym0->HalfDuplex);
+            isbool(p, &anonym0->HalfDuplex);
             break;
          case 9U:
-            bool(p, &anonym0->DamaMaster);
+            isbool(p, &anonym0->DamaMaster);
             break;
          case 10U:
-            bool(p, &anonym0->monitor);
+            isbool(p, &anonym0->monitor);
             break;
          case 11U:
-            bool(p, &anonym0->passall);
+            isbool(p, &anonym0->passall);
             break;
          case 12U:
-            bool(p, &anonym0->Echo);
+            isbool(p, &anonym0->Echo);
             break;
          case 13U:
             if (anonym->test) {
